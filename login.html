@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;           
+            background-image: url(bgg4.jpeg);
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        h1 {
+            color: #ff0000;
+        }
+
+        form {
+            width: 100%;
+            max-width: 300px;
+            text-align: left;
+            margin-top: 40px;
+        }
+
+        label {
+            display: block;
+            margin-top: 10px;
+        }
+
+        input {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            box-sizing: border-box;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            margin-top: 15px;
+            background-color: #32a54d;
+            color: #f8f8f8;
+            border: none;
+            cursor: pointer;
+        }
+        
+    </style>
+</head>
+<body>
+
+    <h1>Blood Buddy </h1>
+    <h2>Sign in</h2>
+    <form action="process_login.php" method="post">
+        <label for="usertype">User Type:</label>
+        <select id="usertype" name="usertype" required>
+            <option value="Admin">Admin</option>
+            <option value="Member">Member</option>
+            <option value="Bloodbank">Blood Bank</option>
+        </select>
+        <br><br>
+    
+        
+        <label for="emailOrRegNo">Email/Registration Number:</label>
+        <input type="text" name="emailOrRegNo" required>
+
+        <br>
+
+        <label for="password">Password:</label>
+        <input type="password" name="password" required>
+    
+        <br><br>
+        <button type="submit">Sign in</button>
+    </form>
+
+</body>
+</html>
