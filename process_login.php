@@ -1,21 +1,23 @@
 <?php
+
+session_start();
 $db_server="localhost";
 $db_user="root";
 $dp_pass="";
 $db_name="blood manager";
 
-// Create connection
 $conn = new mysqli($db_server, $db_user, $dp_pass, $db_name);
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
-// Function to sanitize user inputs
+
+
 function sanitize_input($input) {
     return htmlspecialchars(stripslashes(trim($input)));
 }
 
-// Check if the form is submitted
+
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $usertype = sanitize_input($_POST["usertype"]);
     $emailOrRegNo = sanitize_input($_POST["emailOrRegNo"]);
@@ -41,17 +43,35 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             die("Invalid user usertype");
     }
 
-    // Query to check user credentials
     $sql = "SELECT * FROM $table WHERE $column1 = '$emailOrRegNo' AND $column2 = '$dp_pass'";
     $result = $conn->query($sql);
 
     if ($result->num_rows > 0) {
-        echo "Login successful!";
+        $_SESSION['emailOrRegNo'] = $emailOrRegNo;
+
+        if ($usertype=="Member"){
+            header("Location: member_dashboard.php");
+            exit();
+        }
+
+
+        if ($usertype=="Bloodbank"){
+            header("Location: bb_dashboard.php");
+            exit();
+        }
+
+
+        if ($usertype=="Admin"){
+            header("Location: admin_dashboard.php");
+            exit();
+        }
+        
     } else {
         echo "Invalid email/registration number or password.";
     }
 }
 
-// Close the database connection
+
+
 $conn->close();
 ?>

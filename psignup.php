@@ -23,8 +23,9 @@
                 VALUES ('$Email', '$Password', '$Name', '$Address', '$Age', '$Phone', '$NID', '$dob', '$Bloodgroup' )";
 
         if ($conn->query($sql) === TRUE) {
-            echo "Person signup successful!";
+            include("sign_up_successfull.html");
         } else {
+            
             echo "Error: " . $sql . "<br>" . $conn->error;
         }
      }

@@ -7,12 +7,11 @@
 
     $conn=mysqli_connect($db_server,$db_user,$dp_pass,$db_name);
     if($conn){
-        echo "You are connected WITHg ";
+        echo "You are connected  ";
         echo $db_name;
     }
     else{
         echo "You are not connected";
     }
-    
 
 ?>
