@@ -13,7 +13,6 @@ if (isset($_SESSION['emailOrRegNo'])) {
 
 
 <?php
-//one handling echo not decided
 
 $db_server = "localhost";
 $db_user = "root";
@@ -40,7 +39,7 @@ if ($result->num_rows > 0) {
     $eventsOrganized = $row["event_organized"];
 
 } else {
-    //echo "No data found for the specified Regnum in the bloodbank table.";
+    echo "No data found for the specified Regnum in the bloodbank table.";
 }
 
 $conn->close();
@@ -111,11 +110,11 @@ $conn->close();
         Welcome, <?php echo $name; ?>! You provided <?php echo $bloodBags; ?> bags of blood and arranged <?php echo $eventsOrganized; ?> events.
         </div>
         <div class="action-buttons">
-            <a href="event_approval_request_form.php" class="dashboard-button">Arrange Event</a>
-            <a href="approved_blood_request.php" class="dashboard-button">See Donation Requests</a>
+            <a href="event_approval_request_form.php" class="dashboard-button">Arrange event</a>
+            <a href="approved_blood_request.php" class="dashboard-button">See donation requests</a>
             <a href="blood_request_submission_form.php" class="dashboard-button">Request for blood</a>
-            <a href="approval_page_of_receiver.php" class="dashboard-button">Verify donners request</a>
-            <a href="blood_donation_varification.php" class="dashboard-button">Request to varify your blood donation </a>
+            <a href="approval_page_of_receiver.php" class="dashboard-button">Verify donors request</a>
+            <a href="blood_donation_varification.php" class="dashboard-button">Request to verify your blood donation </a>
 
         </div>
     </div>

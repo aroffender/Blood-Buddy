@@ -119,11 +119,11 @@ $conn->close();
         </div>
 
         <div class="dashboard-buttons">
-            <a href="approved_blood_request.php" class="dashboard-button">Donate Blood</a>
-            <a href="approved_event_requests.php" class="dashboard-button">See Upcoming Events</a>
+            <a href="approved_blood_request.php" class="dashboard-button">Donate blood</a>
+            <a href="approved_event_requests.php" class="dashboard-button">See upcoming events</a>
             <a href="blood_request_submission_form.php" class="dashboard-button">Request for Blood</a>
-            <a href="blood_donation_varification.php" class="dashboard-button">Request to verify your blood donaiton</a>
-            <a href="approval_page_of_receiver.php" class="dashboard-button">varify your donner</a>
+            <a href="blood_donation_varification.php" class="dashboard-button">Request to verify your blood donation</a>
+            <a href="approval_page_of_receiver.php" class="dashboard-button">Verify your donor</a>
         </div>
     </div>
 </body>

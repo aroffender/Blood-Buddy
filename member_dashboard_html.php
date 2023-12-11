@@ -113,7 +113,7 @@ $conn->close();
              Congratulations! You donated <span id="donationCount"><?php echo $donationCount; ?></span> bags of blood.
          </div>
          <div class="dashboard-buttons">
-             <a href="approved_blood_request.php" class="dashboard-button">nate Blood</a>
+             <a href="approved_blood_request.php" class="dashboard-button">Donate Blood</a>
              <a href="#" class="dashboard-button">See Upcoming Events</a>
              <a href="#" class="dashboard-button">Receive Blood</a>
          </div>
